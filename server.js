@@ -88,3 +88,7 @@ const routesuserget = require("./app/routes/userGetRoutes");
 
 app.use("/api", routes);
 app.use("/api", routesuserget);
+
+//http://localhost:8080/api/auth/signup
+
+//http://localhost:8080/api/auth/signin
