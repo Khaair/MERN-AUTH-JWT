@@ -2,26 +2,9 @@ const express = require("express");
 const router = express.Router();
 const userGetModel = require("../models/user.model");
 
-router.get("/showusers", async (req, res) => {
+router.get("/show-users", async (req, res) => {
   let data = await userGetModel.find();
   res.send(data);
-});
-
-router.post("/savepost", async (req, res) => {
-  console.log(req.body);
-
-  const tt = new userGetModel({
-    title: req.body.title,
-    body: req.body.body,
-    userId: req.body.userId,
-  });
-
-  try {
-    const a1 = await tt.save();
-    res.json(a1);
-  } catch (err) {
-    res.send("Error");
-  }
 });
 
 // Get Single information
